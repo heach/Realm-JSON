@@ -38,6 +38,7 @@ static NSString *const kDateFormatDateOnly = @"yyyy-MM-dd";
 	if (self) {
 		self.formatter = [[NSDateFormatter alloc] init];
         self.formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+        self.formatter.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
 
 		switch (style) {
 			case MCJSONDateTransformerStyleDateOnly:
